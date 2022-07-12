@@ -3,9 +3,14 @@ import React from "react";
 class SearchBar extends React.Component {
 
   state = {term: ''}
-  onFormSubmit(event) {
-    event.preventDefault();
-    console.log(this.state.term);
+  // onFormSubmit(event) {
+  //   event.preventDefault();
+  //   console.log(this.state.term);
+  // }
+  // the above is equivalent to 
+  onFormSubmit = function(event) {
+       event.preventDefault();
+       console.log(this.state.term);
   }
 
   render() {
@@ -25,5 +30,29 @@ class SearchBar extends React.Component {
     );
   }
 }
+
+// class Car {
+//   constructor () {
+//     this.drive = this.drive.bind(this);
+//   }
+//   setDriveSound(sound) {
+//     this.sound = sound;
+//   }
+//   drive() {
+//     return this.sound;
+//   }
+// }
+
+// const car = new Car('vroom');
+// car.setDriveSound();
+
+// const drive = car.drive;
+// drive();
+
+// const truck = {
+//   sound: 'putputut',
+//   driveMyTruck: car.drive
+// }
+// truck.driveMyTruck();
 
 export default SearchBar;
