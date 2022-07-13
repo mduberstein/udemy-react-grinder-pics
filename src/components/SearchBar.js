@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 class SearchBar extends React.Component {
-  state = { term: "" };
-  // arrow function binds this to the instance of the Search bar class
-  onFormSubmit = (event) => {
+  state = { term: '' };
+
+  onFormSubmit = event => {
     event.preventDefault();
-    console.log(this.state.term);
-  }
+    this.props.onSubmit(this.state.term);
+  };
 
   render() {
     return (
