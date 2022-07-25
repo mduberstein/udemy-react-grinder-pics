@@ -3,6 +3,7 @@ import React from "react";
 class ImageCard extends React.Component {
   constructor(props) {
     super(props);
+    // spans - number of vertical rows the image should cover
     this.state = {spans: 0};
     this.imageRef = React.createRef();
   }
